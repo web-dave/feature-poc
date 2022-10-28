@@ -6,9 +6,13 @@ import { FeatureService } from '../feature.service';
   selector: 'app-tabs',
   template: `
     <mat-tab-group>
-      <mat-tab label="Tab 1">
-        <app-filter (filter)="service.filter($event, 'tabs')"></app-filter>
-        <app-table [data]="(service.data$ | async) || []"></app-table>
+      <mat-tab label="Tab 1" #one>
+        <ng-container *ngIf="one.isActive">
+          <app-display></app-display>
+          <app-text text="Hallo"></app-text>
+          <app-filter (filter)="service.filter($event, 'tabs')"></app-filter>
+          <app-table [data]="(service.data$ | async) || []"></app-table>
+        </ng-container>
       </mat-tab>
       <mat-tab label="Tab 2"> Content 2 </mat-tab>
     </mat-tab-group>

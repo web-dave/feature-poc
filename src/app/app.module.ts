@@ -7,10 +7,19 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TabsComponent } from './components/tabs.component';
 import { TableComponent } from './components/table.component';
 import { FilterComponent } from './components/filter.component';
-import { MaterialModule } from './material.module';
+import { MaterialModule } from './components/material.module';
+import { TextComponent } from './components/text.component';
+import { DisplayComponent } from './display/display.component';
 
 @NgModule({
-  declarations: [AppComponent, TabsComponent, TableComponent, FilterComponent],
+  declarations: [
+    AppComponent,
+    TabsComponent,
+    TableComponent,
+    FilterComponent,
+    TextComponent,
+    DisplayComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

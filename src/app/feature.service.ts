@@ -37,7 +37,6 @@ export class FeatureService {
   constructor(private router: Router) {}
 
   filter(filterstring: Partial<IFilter>, s?: any) {
-    console.log(filterstring, s);
     this.filteredData$$.next(
       this.data.filter(
         (e) =>
