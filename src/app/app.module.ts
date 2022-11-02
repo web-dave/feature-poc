@@ -10,6 +10,7 @@ import { FilterComponent } from './components/filter.component';
 import { MaterialModule } from './components/material.module';
 import { TextComponent } from './components/text.component';
 import { DisplayComponent } from './display/display.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { DisplayComponent } from './display/display.component';
     AppRoutingModule,
     NoopAnimationsModule,
     MaterialModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
